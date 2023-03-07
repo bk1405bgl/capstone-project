@@ -7,7 +7,7 @@ export default function Form({ onAddFriend }) {
     onAddFriend(data);
 
     event.target.reset();
-    event.target.elements.fName.focus();
+    event.target.elements.friendName.focus();
   }
 
   return (
@@ -15,8 +15,8 @@ export default function Form({ onAddFriend }) {
       <h2>Freund hinzufügen</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="fName">Name: </label>
-          <input id="fName" type="text" name="fName" required />
+          <label htmlFor="friendName">Name: </label>
+          <input type="text" name="friendName" required />
         </div>
         <button type="submit">Speichern!</button>
       </form>
