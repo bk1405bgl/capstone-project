@@ -6,12 +6,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    remotePatterns: [
-      // {
-      //   protocol: 'https',
-      //   hostname: 'images.unsplash.com'
-      // },
-    ],
+    domains: ["i.annihil.us"],
   },
 };
 
