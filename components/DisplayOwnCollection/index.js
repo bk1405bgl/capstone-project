@@ -1,19 +1,6 @@
 import { useState } from "react";
 
-const ownCollection = [
-  /* {
-    id: "1",
-    name: "Name des Comics",
-  },
-  {
-    id: "2",
-    name: "Name des Comics",
-  },
-  {
-    id: "3",
-    name: "Name des Comics",
-  }, */
-];
+const ownCollection = [];
 
 export default function DisplayOwnCollection() {
   const [comics, setComics] = useState(ownCollection);
