@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navigation() {
   return (
     <Container>
-      <StyledLink href="/">
+      <Link href="/">
         <Image
           src="/images/home.png"
           alt="Home"
@@ -12,8 +13,8 @@ export default function Navigation() {
           height={80}
           priority
         />
-      </StyledLink>
-      <StyledLink href="/collection">
+      </Link>
+      <Link href="/collection">
         <Image
           src="/images/collection.png"
           alt="Sammlung"
@@ -21,8 +22,8 @@ export default function Navigation() {
           height={80}
           priority
         />
-      </StyledLink>
-      <StyledLink href="/friends">
+      </Link>
+      <Link href="/friends">
         <Image
           src="/images/friends.png"
           alt="Freunde"
@@ -30,25 +31,20 @@ export default function Navigation() {
           height={80}
           priority
         />
-      </StyledLink>
+      </Link>
     </Container>
   );
 }
 
-const Container = styled.menu`
+const Container = styled.footer`
+  position: sticky;
+  bottom: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 13vh;
-  position: fixed;
-  bottom: -16px;
   left: 0;
   width: 100%;
   border-top: 5px solid;
-  background-color: white;
-`;
-const StyledLink = styled.a`
-  margin-left: -30px;
-  margin-right: 10px;
-  margin-top: 4px;
+  background-color: lightgrey;
 `;

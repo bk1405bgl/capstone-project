@@ -3,11 +3,11 @@ import styled from "styled-components";
 export default function Home() {
   return (
     <main>
-      <Heading>Rent - a - Comic</Heading>
+      <SubHeading>Herzlich willkommen!</SubHeading>
     </main>
   );
 }
 
-const Heading = styled.h1`
+const SubHeading = styled.h3`
   text-align: center;
 `;

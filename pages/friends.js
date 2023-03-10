@@ -14,7 +14,7 @@ export default function Friends() {
 
   return (
     <main>
-      <Heading>Rent - a - Comic</Heading>
+      <SubHeading>Freundesliste</SubHeading>
       <Form onAddFriend={handleAdd} />
       <ul>
         {friends.map((friend) => (
@@ -27,6 +27,6 @@ export default function Friends() {
   );
 }
 
-const Heading = styled.h1`
+const SubHeading = styled.h3`
   text-align: center;
 `;

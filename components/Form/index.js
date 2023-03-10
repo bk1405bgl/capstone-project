@@ -12,7 +12,7 @@ export default function Form({ onAddFriend }) {
 
   return (
     <>
-      <h2>Freund hinzufügen</h2>
+      <h4>Freund hinzufügen</h4>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="friendName">Name: </label>
