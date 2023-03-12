@@ -37,12 +37,12 @@ export default function Navigation() {
 }
 
 const Container = styled.footer`
-  position: sticky;
-  bottom: 0;
+  position: fixed;
+  bottom: -1px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 13vh;
+  height: 14vh;
   left: 0;
   width: 100%;
   border-top: 5px solid;

@@ -10,7 +10,4 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
   }
-  main {
-    height: 100vh;
-    }
 `;
