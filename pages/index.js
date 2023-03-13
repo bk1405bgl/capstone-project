@@ -3,11 +3,11 @@ import styled from "styled-components";
 export default function Home() {
   return (
     <main>
-      <Heading>🐋Capstone Whales Template🐋</Heading>
+      <SubHeading>Herzlich willkommen!</SubHeading>
     </main>
   );
 }
 
-const Heading = styled.h1`
-text-align: center;
+const SubHeading = styled.h3`
+  text-align: center;
 `;

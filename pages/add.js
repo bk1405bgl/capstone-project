@@ -9,28 +9,26 @@ export default function Add({ data, error }) {
 
   return (
     <main>
-      <Heading>
-        Rent - a - Comic
-        <div>
-          {data.map((comic) => (
-            <span key={comic.id}>
-              <Link href="/">
-                <Image
-                  src={`${comic.thumbnail.path}/portrait_xlarge.${comic.thumbnail.extension}`}
-                  alt={comic.title}
-                  width={150}
-                  height={225}
-                  priority
-                />
-              </Link>
-            </span>
-          ))}
-        </div>
-      </Heading>
+      <SubHeading>Verfügbare Comics</SubHeading>
+      <div>
+        {data.map((comic) => (
+          <span key={comic.id}>
+            <Link href="/">
+              <Image
+                src={`${comic.thumbnail.path}/portrait_xlarge.${comic.thumbnail.extension}`}
+                alt={comic.title}
+                width={150}
+                height={225}
+                priority
+              />
+            </Link>
+          </span>
+        ))}
+      </div>
     </main>
   );
 }
 
-const Heading = styled.h1`
+const SubHeading = styled.h3`
   text-align: center;
 `;

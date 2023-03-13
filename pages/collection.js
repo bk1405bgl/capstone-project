@@ -5,13 +5,13 @@ import AddToCollection from "../components/AddToCollection";
 export default function Collection() {
   return (
     <main>
-      <Heading>Rent - a - Comic</Heading>
+      <SubHeading>Comic-Sammlung</SubHeading>
       <AddToCollection />
       <DisplayOwnCollection />
     </main>
   );
 }
 
-const Heading = styled.h1`
+const SubHeading = styled.h3`
   text-align: center;
 `;

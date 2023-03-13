@@ -1,5 +1,7 @@
 import GlobalStyle from "@/styles";
 import Head from "next/head";
+import Header from "../components/Header";
+import Navigation from "../components/Navigation";
 import useSWR from "swr";
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
@@ -14,9 +16,11 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Head>
-        <title>Capstone Project</title>
+        <title>Capstone Project - Rent-a-Comic</title>
       </Head>
+      <Header></Header>
       <Component {...pageProps} data={results} error={error} />
+      <Navigation></Navigation>
     </>
   );
 }
