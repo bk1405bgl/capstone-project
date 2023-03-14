@@ -12,5 +12,7 @@ export default createGlobalStyle`
   }
 main {
   margin-bottom: 14vh;
+  padding: 10px;
+  align-items: center;
 }
 `;
