@@ -6,7 +6,7 @@ export default function Detail({ comic }) {
   return (
     <main>
       <Link href="/add">zurück zur Übersicht</Link>
-      <div key={comic.id}>
+      <div {...comic.id}>
         <div>
           <Image
             src={`${comic.thumbnail.path}/portrait_xlarge.${comic.thumbnail.extension}`}
