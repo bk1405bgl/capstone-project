@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Add({ data, error }) {
-  console.log(data);
   if (error) return <h2>Comics konnten nicht geladen werden..</h2>;
   if (!data) return <h2>Comics werden geladen...</h2>;
   return (
