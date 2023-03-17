@@ -1,7 +1,12 @@
+import Link from "next/link";
+
 export default function FriendsList({ friendName }) {
   return (
     <section>
-      <div>{friendName}</div>
+      <hr />
+      <div>
+        <Link href="#">{friendName}</Link>
+      </div>
     </section>
   );
 }
