@@ -4,9 +4,9 @@ export default function FriendsList({ friendName }) {
   return (
     <section>
       <hr />
-      <div>
+      <span>
         <Link href="#">{friendName}</Link>
-      </div>
+      </span>
     </section>
   );
 }
