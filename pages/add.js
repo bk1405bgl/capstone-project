@@ -8,7 +8,7 @@ export default function Add({ data, error }) {
   if (!data) return <h2>Comics werden geladen...</h2>;
   return (
     <main>
-      <Link href="/collection">Zurück zur eigenen Sammlung</Link>
+      <Link href="/comics">Zurück zur eigenen Sammlung</Link>
       <SubHeading>Verfügbare Comics</SubHeading>
 
       <div>

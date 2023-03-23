@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import FriendsList from "../components/FriendsList";
-import Form from "../components/Form";
+import FriendForm from "../components/FriendForm";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { uid } from "uid";
@@ -39,7 +39,7 @@ export default function Friends() {
   return (
     <main>
       <SubHeading>Freundesliste</SubHeading>
-      <Form onAddFriend={addFriend} />
+      <FriendForm onAddFriend={addFriend} />
       <div>
         {friends?.map((friend) => (
           <span key={friend._id}>
