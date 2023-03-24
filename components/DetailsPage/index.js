@@ -4,7 +4,6 @@ import React from "react";
 
 export default function Detail({ comic }) {
   async function handleFetch() {
-    console.log(comic);
     const response = await fetch("/api/comics", {
       method: "POST",
       body: JSON.stringify(comic),
@@ -12,7 +11,6 @@ export default function Detail({ comic }) {
         "Content-Type": "application/json",
       },
     });
-    alert("Gespeichert");
   }
 
   return (
