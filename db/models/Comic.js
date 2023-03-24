@@ -4,10 +4,12 @@ const { Schema } = mongoose;
 
 const comicSchema = new Schema({
   title: { type: String, required: true },
-  rentToFriendId: { type: String, required: true },
-  description: { type: String, required: true },
-  eanupcisbn: { type: String, required: true },
-  apiId: { type: Number, required: true },
+  rentToFriendId: { type: String },
+  description: { type: String },
+  ean: { type: String },
+  upc: { type: String },
+  isbn: { type: String },
+  id: { type: Number, required: true },
 });
 
 const Comic = mongoose.models.Comic || mongoose.model("Comic", comicSchema);

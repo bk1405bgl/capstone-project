@@ -1,29 +1,18 @@
-import ComicForm from "../ComicForm";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
 export default function Detail({ comic }) {
-  async function addComic(newComic) {
-    const body = {
-      title: newComic.title,
-      rentToFriendId: 0,
-      apiId: newComic.apiId,
-      eanupcisbn: newComic.eanupcisbn,
-      description: newComic.description,
-    };
+  async function handleFetch() {
+    console.log(comic);
     const response = await fetch("/api/comics", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      body: JSON.stringify(comic),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
-
-    if (response.ok) {
-      await response.json();
-      mutate();
-    } else {
-      console.error(response.status);
-    }
+    alert("Gespeichert");
   }
 
   return (
@@ -38,8 +27,9 @@ export default function Detail({ comic }) {
             height={225}
             priority
           />
-
-          <ComicForm onAddComic={addComic} />
+          <button type="button" onClick={handleFetch}>
+            Hinzufügen
+          </button>
         </div>
         <h4>Titel: {comic.title}</h4>
         <p>

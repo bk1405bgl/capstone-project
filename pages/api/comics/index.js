@@ -11,9 +11,9 @@ export default async function handler(request, response) {
       const comicData = request.body;
       const comic = new Comic(comicData);
       await comic.save();
-      return response.status(201).json({ status: "Comic hinzugefügt" });
+      response.status(201).json({ status: "Comic hinzugefügt" });
     } catch (error) {
-      return response.status(400).json({ error: error.message });
+      response.status(400).json({ error: error.message });
     }
   }
 }
