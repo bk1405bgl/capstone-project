@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-const fetcher = (url) => fetch(url).then((r) => r.json());
-
 export default function Detail({ comic }) {
   async function addComic(newComic) {
     const body = {
@@ -26,11 +24,6 @@ export default function Detail({ comic }) {
     } else {
       console.error(response.status);
     }
-  }
-
-  function handleSubmit(event) {
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
   }
 
   return (
