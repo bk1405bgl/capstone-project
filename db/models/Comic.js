@@ -1,0 +1,17 @@
+import mongoose from "mongoose";
+
+const { Schema } = mongoose;
+
+const comicSchema = new Schema({
+  title: { type: String, required: true },
+  rentToFriendId: { type: String },
+  description: { type: String },
+  ean: { type: String },
+  upc: { type: String },
+  isbn: { type: String },
+  id: { type: Number, required: true },
+});
+
+const Comic = mongoose.models.Comic || mongoose.model("Comic", comicSchema);
+
+export default Comic;

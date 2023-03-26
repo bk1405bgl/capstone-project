@@ -11,7 +11,7 @@ export default async function handler(request, response) {
       const friendData = request.body;
       const friend = new Friend(friendData);
       await friend.save();
-      return response.status(201).json({ status: "Friend added" });
+      return response.status(201).json({ status: "Freund hinzugefügt" });
     } catch (error) {
       return response.status(400).json({ error: error.message });
     }

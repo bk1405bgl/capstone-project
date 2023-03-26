@@ -14,7 +14,7 @@ export default function Navigation() {
           priority
         />
       </Link>
-      <Link href="/collection">
+      <Link href="/comics">
         <Image
           src="/images/collection.png"
           alt="Sammlung"
@@ -42,9 +42,8 @@ const Container = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 14vh;
+  height: 12vh;
   left: 0;
   width: 100%;
-  border-top: 5px solid;
-  background-color: lightgrey;
+  background-color: red;
 `;

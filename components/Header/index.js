@@ -13,5 +13,4 @@ const Heading = styled.header`
   font-size: 25pt;
   background-color: red;
   color: white;
-  border-style: 2px solid black;
 `;

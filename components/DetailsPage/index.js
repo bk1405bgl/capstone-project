@@ -3,6 +3,16 @@ import Image from "next/image";
 import React from "react";
 
 export default function Detail({ comic }) {
+  async function handleFetch() {
+    const response = await fetch("/api/comics", {
+      method: "POST",
+      body: JSON.stringify(comic),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
+
   return (
     <main>
       <Link href="/add">zurück zur Übersicht</Link>
@@ -15,15 +25,9 @@ export default function Detail({ comic }) {
             height={225}
             priority
           />
-          <Link href="#">
-            <Image
-              src="/images/plus.png"
-              alt="zur Sammlung hinzufügen"
-              width={100}
-              height={100}
-              priority
-            />
-          </Link>
+          <button type="button" onClick={handleFetch}>
+            Hinzufügen
+          </button>
         </div>
         <h4>Titel: {comic.title}</h4>
         <p>
