@@ -1,11 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import useSWRMutation from "swr/mutation";
+import { useRouter } from "next/router";
 
 export default function Detail({ comic, friends }) {
   // const [friendId, setFriendId] = useState({});
   // if (!comic || !friends) return <h3>Loading</h3>;
+  const router = useRouter();
+  const route = router.route;
   const { id, title, upc, description, images } = comic;
   const { trigger, isMutating } = useSWRMutation(
     `/api/comics/${title}`,
@@ -35,6 +38,7 @@ export default function Detail({ comic, friends }) {
     await fetch(`/api/comics/${comic._id}`, {
       method: "DELETE",
     });
+    router.push("/comics");
   }
   async function handleNoFriend(event) {
     event.preventDefault();
