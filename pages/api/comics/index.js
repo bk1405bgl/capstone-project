@@ -15,5 +15,8 @@ export default async function handler(request, response) {
     } catch (error) {
       response.status(400).json({ error: error.message });
     }
+  } else if (request.method === "PUT") {
+    try {
+    } catch (error) {}
   }
 }

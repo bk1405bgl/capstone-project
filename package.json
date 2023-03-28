@@ -10,6 +10,7 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "dropdown": "^0.2.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "mongodb": "^5.1.0",
@@ -19,6 +20,7 @@
     "react-dom": "18.2.0",
     "styled-components": "^5.3.8",
     "swr": "^2.1.0",
+    "trace": "^3.1.1",
     "uid": "^2.0.1",
     "vercel": "^28.16.15"
   },
