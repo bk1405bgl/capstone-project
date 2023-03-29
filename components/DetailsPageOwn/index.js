@@ -56,11 +56,13 @@ export default function Detail({ comic, friends }) {
     });
     router.push("/comics");
   }
-  async function handleNoFriend(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const comicData = Object.fromEntries(formData);
-    await trigger(comicData);
+  async function handleNoFriend() {
+    await fetch(`/api/comics/friend/${comic._id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
   return (
     <main>
@@ -87,9 +89,11 @@ export default function Detail({ comic, friends }) {
               Aus Sammlung entfernen
             </button>
           </form>
-          <form onSubmit={handleNoFriend}>
-            <button type="submit">Vom Freund zurück erhalten</button>
-          </form>
+
+          <button type="button" onClick={handleNoFriend}>
+            Vom Freund zurück erhalten
+          </button>
+
           <div>
             <Image
               src={`${images[0].path}/portrait_xlarge.${images[0].extension}`}
