@@ -5,8 +5,6 @@ import useSWRMutation from "swr/mutation";
 import { useRouter } from "next/router";
 
 export default function Detail({ comic, friends }) {
-  // const [friendId, setFriendId] = useState({});
-  // if (!comic || !friends) return <h3>Loading</h3>;
   const router = useRouter();
   const route = router.route;
   const { id, _id, title, upc, description, images } = comic;
