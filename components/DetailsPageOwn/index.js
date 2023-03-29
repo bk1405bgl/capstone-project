@@ -90,13 +90,15 @@ export default function Detail({ comic, friends }) {
               Vom Freund zurück erhalten
             </button>
           </form>
-          <Image
-            src={`${images[0].path}/portrait_xlarge.${images[0].extension}`}
-            alt={title}
-            width={150}
-            height={225}
-            priority
-          />
+          <div>
+            <Image
+              src={`${images[0].path}/portrait_xlarge.${images[0].extension}`}
+              alt={title}
+              width={150}
+              height={225}
+              priority
+            />
+          </div>
         </div>
         <h4>Titel: {title}</h4>
         <p>
