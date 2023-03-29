@@ -16,7 +16,7 @@ const comicSchema = new Schema({
     },
   ],
   id: { type: Number, required: true },
-  friendId: { type: String },
+  friendId: { type: Schema.Types.ObjectId },
 });
 
 const Comic = mongoose.models.Comic || mongoose.model("Comic", comicSchema);

@@ -9,9 +9,9 @@ export default function Detail({ comic, friends }) {
   // if (!comic || !friends) return <h3>Loading</h3>;
   const router = useRouter();
   const route = router.route;
-  const { id, title, upc, description, images } = comic;
+  const { id, _id, title, upc, description, images } = comic;
   const { trigger, isMutating } = useSWRMutation(
-    `/api/comics/${title}`,
+    `/api/comics/${_id}`,
     sendRequest
   );
   async function sendRequest(url, { arg }) {
@@ -28,6 +28,22 @@ export default function Detail({ comic, friends }) {
       console.error(`Error: ${response.status}`);
     }
   }
+
+  async function sendRequest(url, { arg }) {
+    const response = await fetch(url, {
+      method: "PUT",
+      body: JSON.stringify(arg),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      await response.json();
+    } else {
+      console.error(`Error: ${response.status}`);
+    }
+  }
+
   async function handleRent(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -42,6 +58,9 @@ export default function Detail({ comic, friends }) {
   }
   async function handleNoFriend(event) {
     event.preventDefault();
+    const formData = new FormData(event.target);
+    const comicData = Object.fromEntries(formData);
+    await trigger(comicData);
   }
   return (
     <main>
@@ -49,8 +68,10 @@ export default function Detail({ comic, friends }) {
       <div>
         <div>
           <form onSubmit={handleRent}>
-            <select name="friends">
-              <option value="">Freund auswählen</option>
+            <select name="friendId">
+              <option value="" selected disabled>
+                Freund auswählen
+              </option>
               {friends?.map((friend) => {
                 return (
                   <option key={friend._id} value={friend._id}>
