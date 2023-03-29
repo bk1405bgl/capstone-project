@@ -4,7 +4,6 @@ const { Schema } = mongoose;
 
 const friendSchema = new Schema({
   friendName: { type: String, required: true },
-  rentComicId: { type: String, required: true },
 });
 
 const Friend = mongoose.models.Friend || mongoose.model("Friend", friendSchema);

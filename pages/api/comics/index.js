@@ -15,5 +15,14 @@ export default async function handler(request, response) {
     } catch (error) {
       response.status(400).json({ error: error.message });
     }
+  } else if (request.method === "PUT") {
+    try {
+      const comicToUpdate = await Comic.findByIdAndUpdate(id, {
+        $set: request.body,
+      });
+      response.status(200).json(comicToUpdate);
+    } catch (error) {
+      response.status(400).json({ error: error.message });
+    }
   }
 }

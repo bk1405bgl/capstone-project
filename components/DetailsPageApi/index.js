@@ -12,14 +12,13 @@ export default function Detail({ comic }) {
       },
     });
   }
-
   return (
     <main>
       <Link href="/add">zurück zur Übersicht</Link>
       <div {...comic.id}>
         <div>
           <Image
-            src={`${comic.thumbnail.path}/portrait_xlarge.${comic.thumbnail.extension}`}
+            src={`${comic.images[0].path}/portrait_xlarge.${comic.images[0].extension}`}
             alt={comic.title}
             width={150}
             height={225}

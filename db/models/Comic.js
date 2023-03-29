@@ -9,7 +9,14 @@ const comicSchema = new Schema({
   ean: { type: String },
   upc: { type: String },
   isbn: { type: String },
+  images: [
+    {
+      path: { type: String },
+      extension: { type: String },
+    },
+  ],
   id: { type: Number, required: true },
+  friendId: { type: Schema.Types.ObjectId },
 });
 
 const Comic = mongoose.models.Comic || mongoose.model("Comic", comicSchema);
