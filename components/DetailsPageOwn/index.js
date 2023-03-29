@@ -86,9 +86,9 @@ export default function Detail({ comic, friends }) {
             <button type="button" onClick={() => handleDelete()}>
               Aus Sammlung entfernen
             </button>
-            <button type="button" onClick={handleNoFriend}>
-              Vom Freund zurück erhalten
-            </button>
+          </form>
+          <form onSubmit={handleNoFriend}>
+            <button type="submit">Vom Freund zurück erhalten</button>
           </form>
           <div>
             <Image
