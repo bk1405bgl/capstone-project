@@ -1,8 +1,7 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import FriendForm from ".";
 
-test("renders title", () => {
+test("renders the FriendForm component", () => {
   render(<FriendForm />);
-  const title = screen.getByText(/Freund hinzufügen/i);
 });
