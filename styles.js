@@ -11,8 +11,15 @@ export default createGlobalStyle`
     font-family: system-ui;
   }
 main {
-  margin-bottom: 14vh;
-  padding: 10px;
+  
+  width: 100%;
+  padding: auto;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 `;

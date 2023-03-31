@@ -1,6 +1,6 @@
 export default function FriendsList({ friendName }) {
   return (
-    <section>
+    <section role="section">
       <hr />
       <div>{friendName}</div>
     </section>

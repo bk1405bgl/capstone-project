@@ -13,12 +13,21 @@ export default function FriendForm({ onAddFriend }) {
   return (
     <>
       <h4>Freund hinzufügen</h4>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        name="friendForm"
+        role="form"
+        aria-label="name"
+      >
         <div>
-          <label htmlFor="friendName">Name: </label>
+          <label htmlFor="friendName" aria-label="name">
+            Name:{" "}
+          </label>
           <input type="text" name="friendName" required />
         </div>
-        <button type="submit">Speichern!</button>
+        <button type="submit" aria-label="button">
+          Speichern!
+        </button>
       </form>
     </>
   );

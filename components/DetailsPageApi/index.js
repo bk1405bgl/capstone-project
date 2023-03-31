@@ -24,13 +24,13 @@ export default function Detail({ comic }) {
             height={225}
             priority
           />
-          <button type="button" onClick={handleFetch}>
+          <button type="button" onClick={handleFetch} role="button">
             Hinzufügen
           </button>
         </div>
         <h4>Titel: {comic.title}</h4>
         <p>
-          <b>EAN/UPC/ISBN:</b> {comic.upc}
+          <b>EAN-UPC-ISBN:</b> {comic.upc}
         </p>
         <p>
           <b>Beschreibung:</b> {comic.description}
